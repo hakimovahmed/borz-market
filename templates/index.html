@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Главная страница</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% for el in data %}
+    <div class="card">
+      <img src="https://twigo.ru/center/iblock/743/zr2a1whxanzf1qgdetg21isls594zx4w/214r7zui8717tcedyakhe0gy3jxruch7.webp" alt="Товар 1">
+      <div class="card-body">
+        <h2 class="card-title">{{el.title}}</h2>
+        <div class="card-price">{{el.price}}</div>
+        <a href="/buy/{{ el.id }}"><button>Купить</button></a> 
+      </div>
+    </div>
+    {% endfor %}
+
+
+</div>
+
+{% endblock %}
